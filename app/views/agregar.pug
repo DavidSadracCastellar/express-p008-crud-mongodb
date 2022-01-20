@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1
+        a(href="/") Agregar nueva camiseta
+
+    div.contenedor
+
+        form(name="agregarItem", action="/agregar", method="post")
+            
+            label Color 
+            input(type="text", name="color")
+
+            label Name 
+            input(type="text", name="name")
+
+            label Precio
+            input(type="text", name="precio")
+
+            label Descripción 
+            input(type="textarea", name="descripcion")
+
+            input(type="submit", value="Guardar")

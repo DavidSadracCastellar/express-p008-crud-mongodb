@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1
+        a(href="/")=titulo
+
+    div.agregar
+        a(href="agregar") Agregar
+    
+    div.contenedor 
+    - for (var i = 0; i < camisetasList.length; i++) {
+        div.item
+            h2 Camiseta: #{camisetasList[i].name}
+            span Color: #{camisetasList[i].color}
+            br
+            small Precio: #{camisetasList[i].precio}
+    - }
